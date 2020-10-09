@@ -1,0 +1,17 @@
+{
+    "name": "ImageXtracter Pro",
+    "description": "Exract all the images from the webpage easily and fast!",
+    "version": "1.0.27",
+    "permissions": ["<all_urls>","tabs", "activeTab","downloads"],
+    "browser_action": {
+        "default_popup": "popups/index.html"
+    },
+    "background":{
+            "scripts": ["jquery-3.5.1.min.js", "background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js":["jquery-3.5.1.min.js", "content.js"]
+    }],
+    "manifest_version": 2
+}
